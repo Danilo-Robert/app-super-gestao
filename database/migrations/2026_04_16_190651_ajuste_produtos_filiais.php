@@ -32,7 +32,7 @@ return new class extends Migration
             $table->foreign('produto_id')->references('id')->on('produtos');
         });
 
-        Schema::create('produtos', function(Blueprint $table){
+        Schema::table('produtos', function(Blueprint $table){
             $table->dropColumn(['preco_venda', 'estoque_minimo', 'estoque_maximo']);
         });
     }
@@ -42,7 +42,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::create('produtos', function(Blueprint $table){
+        Schema::table('produtos', function(Blueprint $table){
             $table->decimal('preco_Venda', 8, 2);
             $table->integer('estoque_minimo');
             $table->integer('estoque_maximo');
