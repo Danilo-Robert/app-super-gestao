@@ -9,5 +9,5 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class SiteContato extends Model
 {
     use HasFactory;
-    protected $fillable = ['nome', 'email', 'telefone', 'motivo_contato', 'mensagem'];
+    protected $fillable = ['nome', 'email', 'telefone', 'motivo_contatos_id', 'mensagem'];
 }
