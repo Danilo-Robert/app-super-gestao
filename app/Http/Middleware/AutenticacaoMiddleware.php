@@ -13,9 +13,10 @@ class AutenticacaoMiddleware
      *
      * @param  Closure(Request): (Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next, $param1, $param2): Response
     {
-        if(true){
+        
+        if(false){
             return $next($request);
         } else {
             return Response('Acesso negado! Rota exige autenticação!!!');

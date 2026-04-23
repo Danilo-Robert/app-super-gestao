@@ -17,6 +17,9 @@ return Application::configure(basePath: dirname(__DIR__))
            'log.acesso' => LogAcessoMiddleware::class,
            'autenticacao' => AutenticacaoMiddleware::class,
         ]);
+        $middleware->web(append: [
+            LogAcessoMiddleware::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
