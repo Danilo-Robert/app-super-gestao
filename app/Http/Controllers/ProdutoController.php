@@ -16,6 +16,7 @@ class ProdutoController extends Controller
     {
         $produtos = Produto::paginate(10);
 
+        //relacionamento 1 para 1
         foreach($produtos as $key => $produto){
 
             $produtoDetalhe = ProdutoDetalhe::where('produto_id', $produto->id)->first();
